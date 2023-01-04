@@ -1,0 +1,25 @@
+* {
+    height: 100%;
+}
+#square-container {
+    height: 400px;
+    width: 400px;
+    border: 1px;
+    border-style: solid;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+
+}
+
+.grid-square {
+    background-color: white; 
+    height: 25px; 
+    width: 25px;
+
+}
+
+.activated-grid-square {
+    background-color: black;
+    transition-end: 5ms;
+}
