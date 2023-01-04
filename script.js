@@ -14,7 +14,7 @@ function createSquare(i) {
     squareContainer.appendChild(squareArray[i]);
 }
 //Index and function call for all 256 square creation
-for (let i = 0; i < 256; i++) {
+let gridDimensions = 256;
+for (let i = 0; i < gridDimensions; i++) {
     createSquare(i);
 }
-//event listener for hover

@@ -16,10 +16,9 @@
     background-color: white; 
     height: 25px; 
     width: 25px;
-
 }
 
 .activated-grid-square {
     background-color: black;
-    transition-end: 5ms;
 }
+
