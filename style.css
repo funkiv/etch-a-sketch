@@ -23,11 +23,12 @@ body {
 
 .grid-square {
     background-color: white; 
+    border-radius: 5px;
     height: 25px; 
     width: 25px;
 }
 
 .activated-grid-square {
-    background-color: black;
+    background-color: grey;
 }
 
