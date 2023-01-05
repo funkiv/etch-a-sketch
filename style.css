@@ -1,5 +1,14 @@
-* {
-    height: 100%;
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #square-container {
     height: 400px;
@@ -7,7 +16,7 @@
     border: 1px;
     border-style: solid;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
     gap: 0px;
 
 }

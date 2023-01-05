@@ -26,8 +26,13 @@ function createSquare(gridDimensions) {
 }
 //Default dimensions and grid creation
 let gridDimensions = 16;
-
+createSquare(gridDimensions);
 //User specified dimensions and grid creation  
-gridDimensions = prompt("Enter grid size: ")
-createSquare(gridDimensions) 
+let button = document.querySelector('button');
+button.addEventListener("click", () => {
+gridDimensions = prompt("Enter grid size, max 100: ")
+    if (gridDimensions <= 100) {
+        createSquare(gridDimensions);
+    }
+});
     
