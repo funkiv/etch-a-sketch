@@ -1,5 +1,6 @@
-//Grid creation
+//Shade lock to prevent shading if toggled
 let notLocked = true;
+//Grid creation
 let squareContainer = document.getElementById("square-container");
 //container for individual squares instantiated
 let squareArray = [];
@@ -17,10 +18,7 @@ function createSquare(gridDimensions) {
             //adds square class
             squareArray[i].classList.add("grid-square")
             //Adds event listener to all elements, mouseover activated class is added
-            squareArray[i].addEventListener("mouseover", activateSquare);
-            function activateSquare() {
-                squareArray[i].classList.add("activated-grid-square");
-            }
+            squareArray[i].addEventListener("mouseover", () => {squareArray[i].classList.add("activated-grid-square")});
             //Add height & width style to each individual element
             let squareDimensions = 400 / gridDimensions;
             squareArray[i].style.height = `${squareDimensions}px`;
@@ -29,7 +27,6 @@ function createSquare(gridDimensions) {
             squareContainer.appendChild(squareArray[i]);
         } 
     }
-    let activateSquare = activateSquare;
 }   
 
 //Default dimensions and grid creation
@@ -49,19 +46,13 @@ let buttons = document.querySelectorAll('button');
 buttons[0].addEventListener('click', () => {
     createSquare(gridDimensions);
 });
-//Save Drawing Button
 
+//Save Drawing Button toggle
 function toggle() {
     notLocked = !notLocked;
     if(!notLocked) {
-        // for (let i = 0; i < Math.pow(gridDimensions, 2); i++){
-        //     squareArray[i].removeEventListener("mouseover", () => squareArray[i].classList.add("activated-grid-square"));
-        // }
         buttons[1].innerText = "Unlock Drawing";
     } else {
-        // for (let i = 0; i < Math.pow(gridDimensions, 2); i++){
-        //    // squareArray[i].classList.add("activated-grid-square"));
-        // }
         buttons[1].innerText = "Lock Drawing";    
     }
 };
