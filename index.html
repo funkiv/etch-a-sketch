@@ -10,14 +10,19 @@
 </head>
 <body>
     <header>
+        <img src="images/grid-pic.png" alt="">
         <h1>Web Etch-A-Sketch</h1>
     </header>
     <div class="section-1">
         <p>Welcome, hover your mouse over the grid to draw what your heart desires</p>
-            <button>Change Grid Size</button>
+        <div>
+            <input type="range" min="1" max="32" value="1" id="slider">
+            <button>Reset Grid</button>
+        </div>
     </div>
     <div class="section-2">
         <div id="square-container"></div>
+        <button onclick="toggle()">Lock Drawing</button>
     </div>
     <footer>
         Created by slashack
