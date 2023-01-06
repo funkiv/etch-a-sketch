@@ -10,10 +10,21 @@ body,html {
     color: white;
     font-family: 'Rowdies', cursive;
 }
+img {
+    height: 50px;]
+    width: 50px;
+}
+img:hover {
+    opacity: 50%;
+    transition: .5s;
+}
 header { 
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 20px;
     width: 100%;
-    padding-left: 5%;
+    padding-left: 20px; 
     background-color: #404258;
 }
 button {
